@@ -13,4 +13,4 @@ are certainly great, but they are not as declarative as function referenced.
 ```
 
 This is of course opinionated, but we wanted to explore a pattern where operators er not necessary
-and you are not drowned in file creation :-)
+and you are not forced to drown in file creation because not using them :-)
