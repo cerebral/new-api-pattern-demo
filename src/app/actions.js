@@ -18,9 +18,10 @@ export const setUser = ({ module, props }) => module.set('user', props.user)
 // The base CerebralError has a message, details and stack. You
 // extend to new error types to act differently on them, in this case
 // we catch it and send error details to some error service
-export const notifyApiError = ({ http, props }) =>
+export const notifyApiError = ({ http, props, device }) =>
   http.post('http://error.reporter.com', {
     message: props.error.message,
     details: props.error.details,
-    stack: props.error.stack
+    stack: props.error.stack,
+    isMobile: device.isMobile()
   })

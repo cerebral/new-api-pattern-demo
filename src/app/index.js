@@ -1,6 +1,7 @@
 import { Module } from 'cerebral'
 import HttpProvider from '@cerebral/http'
 import { ApiError } from './errors'
+import { device } from './providers'
 import * as sequences from './sequences'
 
 // Use the Module factory to define
@@ -15,7 +16,8 @@ export default Module({
   // names
   providers: {
     http: HttpProvider(),
-    api: HttpProvider({ baseUrl: '/api' })
+    api: HttpProvider({ baseUrl: '/api' }),
+    device
   },
   signals: {
     initialized: sequences.initialize
